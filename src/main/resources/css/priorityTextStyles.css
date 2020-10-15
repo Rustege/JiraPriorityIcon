@@ -1,0 +1,8 @@
+.priority-tooltip-header {
+    text-transform:uppercase;
+    text-align:left;
+}
+.priority-tooltip-body {
+    text-align:left;
+    color:#ccc;
+}

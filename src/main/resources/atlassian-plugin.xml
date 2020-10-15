@@ -1,0 +1,20 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+    
+    <web-resource key="${project.artifactId}-resources" name="${project.name} Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="priorityTextStyles.css" location="/css/priorityTextStyles.css"/>
+        <resource type="download" name="issueNavigatorMutateIssueRow.js" location="/js/issueNavigatorMutateIssueRow.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>jira.navigator.simple</context>
+        <context>jira.navigator.advanced</context>
+    </web-resource>
+</atlassian-plugin>
